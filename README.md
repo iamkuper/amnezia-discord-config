@@ -14,18 +14,37 @@
 - [x] `index.js` - NodeJS скрипт для генерации конфига из TXT 
 
 
-## Как добавить адреса в GoodbyeDPI
+## Как добавить в GoodbyeDPI
 
 1. Перейти в папку GoodbyeDPI
 2. Добавить содержимое файла `data/domains.txt` из репозитория в файл `russia-blacklist.txt` 
 3. Profit
 
-## Как добавить адреса в Amnezia VPN
+## Как добавить в Amnezia VPN
 
 1. Перейти в настройки Amenzia VPN
 2. Пункт **Раздельное туннелирование сайтов**
 3. Выполнить **Импорт** файла `configs/amnezia.json`
 4. Profit
+
+## Как добавить в правила роутера (OpenWRT)
+
+1. Перейти в веб-морду роутера `192.168.1.1`
+2. Добавить `IP Sets` в настройки сети (`Networks` > `Fiorewall`)
+- `Name`: <любое>
+- `Family`: IPv4
+- `Packet Field Match`: dest_ip
+- `Include File`: загрузить файл из репозитория `configs/openwrt.txt`
+- Сохранить настройки.
+3. Добавить `Traffic Rules` в настройки сети (`Networks` > `Fiorewall`)
+- `Source zone`: lan
+- `Destination zone`: Any zone
+- `Action`: apply firewall mark
+- `Set mark`: 0x1
+- `Adavanced Settings` > `Restrict to address family`: IPv4 only
+- `Adavanced Settings` > `Use ipset`: <название сета из п.2>
+- Сохранить настройки.
+4. Перезагрузить сеть (или роутер).
 
 
 ## Поддержать автора

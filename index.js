@@ -10,6 +10,8 @@ const DELIMITER = "\r\n";
 // DNS сервер для резолвинга
 const DNS_SERVER = "8.8.8.8";
 
+let ips = [];
+
 // Устанавливаем кастомные DNS-серверы
 const resolver = new Resolver();
 resolver.setServers([ DNS_SERVER ]);
@@ -17,15 +19,11 @@ resolver.setServers([ DNS_SERVER ]);
 (async () => {
 
     // Читаем построчно данные из списка IP и форматируем конфиг
-    let config = fs
-        .readFileSync('data/ips.txt')
+    fs.readFileSync('data/ips.txt')
         .toString()
         .split(DELIMITER)
-        .map((hostname) => {
-            return {
-                hostname,
-                ip: ""
-            }
+        .forEach((hostname) => {
+            ips.push(hostname);
         })
 
     // Загружаем домены
@@ -34,16 +32,11 @@ resolver.setServers([ DNS_SERVER ]);
         .split(DELIMITER);
 
     // Получаем списки IP из DNS
-    const dnsConfig = [];
     const dnsPromises = domainsIps.map(async (hostname) => {
         try {
             const addresses = await resolver.resolve4(hostname);
-            console.log(addresses);
             addresses.forEach((hostname) => {
-                dnsConfig.push({
-                    hostname,
-                    ip: ""
-                });
+                ips.push(hostname);
             });
         } catch (err) {
             console.error(`Ошибка при разрешении DNS для ${hostname}:`, err);
@@ -54,10 +47,21 @@ resolver.setServers([ DNS_SERVER ]);
     await Promise.all(dnsPromises);
 
     // Преобразуйте массив в строку JSON
-    const jsonConfig = JSON.stringify([ ...config, ...dnsConfig ], null, 2);
+    const uniqueIPs = [...new Set(ips)].sort();
+    const jsonConfig = uniqueIPs.map((hostname) => {
+        return {
+            hostname,
+            ip: ""
+        }
+    });
 
 
-    fs.writeFile('configs/amnezia.json', jsonConfig, (err) => {
+    fs.writeFile('configs/amnezia.json', JSON.stringify(jsonConfig, null, 2), (err) => {
+        if (err) console.error('Ошибка записи в файл', err);
+        else console.log('Файл успешно сохранен.');
+    });
+
+    fs.writeFile('configs/openwrt.txt', uniqueIPs.join(DELIMITER), (err) => {
         if (err) console.error('Ошибка записи в файл', err);
         else console.log('Файл успешно сохранен.');
     });
