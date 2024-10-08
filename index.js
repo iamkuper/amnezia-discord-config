@@ -8,7 +8,7 @@ const DELIMITER = "\r\n";
 
 // Читаем построчно данные из списка IP и форматируем в массив
 const config = fs
-    .readFileSync('ips.txt')
+    .readFileSync('data/ips.txt')
     .toString()
     .split(DELIMITER)
     .map((hostname) => {
@@ -23,7 +23,7 @@ const config = fs
 const jsonConfig = JSON.stringify(config, null, 2);
 
 
-fs.writeFile('amnezia_sites.json', jsonConfig, (err) => {
+fs.writeFile('configs/amnezia.json', jsonConfig, (err) => {
     if (err) console.error('Ошибка записи в файл', err);
     else console.log('Файл успешно сохранен.');
 });
