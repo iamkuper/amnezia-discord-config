@@ -1,6 +1,6 @@
-# Что это и зачем?
+# Что и зачем?
 
-Этот репозиторий содержит список IP-адресов, используемых голосовыми серверами Discord, а так же готовый JSON-конфиг для Amnezia VPN. 
+Этот репозиторий содержит список IP-адресов, используемых мессенджером Discord, а так же готовый JSON-конфиг раздельного туннелирования для Amnezia VPN. 
 
 
 ## Структура репозитория
@@ -12,6 +12,6 @@
 
 ## Поддержать автора
 
-- USDT (TRC20): TQANwUtCf9UmLZyM3Ty18hDsYpPAVmrpbH
-- BTC : bc1quvv5knvrvya5hn4xzpsfp5tpm5n9yuvmscmg6t
-- ETH : 0xF6a93e81A7cf88b22F5Cec3ABfC0A2295A5Aa7A3
+- **USDT (TRC20):** TQANwUtCf9UmLZyM3Ty18hDsYpPAVmrpbH
+- **BTC:** bc1quvv5knvrvya5hn4xzpsfp5tpm5n9yuvmscmg6t
+- **ETH:** 0xF6a93e81A7cf88b22F5Cec3ABfC0A2295A5Aa7A3
