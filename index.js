@@ -6,6 +6,8 @@ import { Resolver } from 'dns/promises'; // Используем promises API
 
 // Разделитель строк в TXT
 const DELIMITER = "\r\n";
+
+// DNS сервер для резолвинга
 const DNS_SERVER = "8.8.8.8";
 
 // Устанавливаем кастомные DNS-серверы
