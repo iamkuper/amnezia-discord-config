@@ -10,6 +10,7 @@
 - [x] `data/domains.txt` - список всех доменных имен, принадлежащих Discord.
 <br><br>
 - [x] `configs/amnezia.json` - готовый конфиг для раздельного туннелирования в Amnezia VPN
+- [x] `configs/openwrt.txt` - готовый IP Set для раздельного туннелирования в OpenWRT
 <br><br>
 - [x] `index.js` - NodeJS скрипт для генерации конфига из TXT 
 
