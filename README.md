@@ -42,8 +42,8 @@
 	- `Destination zone`: Any zone
 	- `Action`: apply firewall mark
 	- `Set mark`: 0x1
-	- `Adavanced Settings` > `Restrict to address family`: IPv4 only
-	- `Adavanced Settings` > `Use ipset`: <название сета из п.2>
+	- `Adavanced Settings > Restrict to address family`: IPv4 only
+	- `Adavanced Settings > Use ipset`: <название сета из п.2>
 	- Сохранить настройки.
 4. Перезагрузить сеть (или роутер).
 
