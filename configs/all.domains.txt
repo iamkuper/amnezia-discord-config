@@ -23,7 +23,6 @@ watchanimeattheoffice.com
 discord-attachments-uploads-prd.storage.googleapis.com
 www.discordapp.com
 1187013846746005515.discordsays.com
-discordsays.com
 cdn.discordapp.com
 media.discordapp.net
 status.discord.com
