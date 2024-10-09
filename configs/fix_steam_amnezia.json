@@ -1,0 +1,38 @@
+[
+    {
+        "hostname": "steam-chat.com",
+        "ip": "23.58.204.91"
+    },
+    {
+        "hostname": "steam-content-dnld-1.qwilted-cds.cqloud.com",
+        "ip": ""
+    },
+    {
+        "hostname": "steam-software.dlt.qwilted-cds.cqloud.com",
+        "ip": "3.123.180.154"
+    },
+    {
+        "hostname": "steamcommunity.com",
+        "ip": "2.16.174.204"
+    },
+    {
+        "hostname": "steampowered.com",
+        "ip": "23.58.204.91"
+    },
+    {
+        "hostname": "steamserver.net",
+        "ip": ""
+    },
+    {
+        "hostname": "steamstatic.com",
+        "ip": ""
+    },
+    {
+        "hostname": "steamusercontent.com",
+        "ip": ""
+    },
+    {
+        "hostname": "store.steampowered.com",
+        "ip": "23.202.117.50"
+    }
+]
