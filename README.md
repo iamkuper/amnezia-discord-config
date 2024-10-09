@@ -32,19 +32,19 @@
 
 1. Перейти в веб-морду роутера `192.168.1.1`
 2. Добавить `IP Sets` в настройки сети (`Networks` > `Firewall`)
-- `Name`: <любое>
-- `Family`: IPv4
-- `Packet Field Match`: dest_ip
-- `Include File`: загрузить файл из репозитория `configs/openwrt.txt`
-- Сохранить настройки.
+	- `Name`: <любое>
+	- `Family`: IPv4
+	- `Packet Field Match`: dest_ip
+	- `Include File`: загрузить файл из репозитория `configs/openwrt.txt`
+	- Сохранить настройки.
 3. Добавить `Traffic Rules` в настройки сети (`Networks` > `Firewall`)
-- `Source zone`: lan
-- `Destination zone`: Any zone
-- `Action`: apply firewall mark
-- `Set mark`: 0x1
-- `Adavanced Settings` > `Restrict to address family`: IPv4 only
-- `Adavanced Settings` > `Use ipset`: <название сета из п.2>
-- Сохранить настройки.
+	- `Source zone`: lan
+	- `Destination zone`: Any zone
+	- `Action`: apply firewall mark
+	- `Set mark`: 0x1
+	- `Adavanced Settings` > `Restrict to address family`: IPv4 only
+	- `Adavanced Settings` > `Use ipset`: <название сета из п.2>
+	- Сохранить настройки.
 4. Перезагрузить сеть (или роутер).
 
 
