@@ -1,8 +1,8 @@
 {
-  "name": "amnezia-discord-lists",
+  "name": "amnezia-discord-config",
   "version": "1.0.0",
   "type": "module",
-  "description": "Этот репозиторий содержит список IP-адресов, используемых голосовыми серверами Discord. Эти списки могут быть полезны для пользователей, которые хотят настроить 'корректную' маршрутизацию через прокси-серверы для обеспечения 'стабильной' работы голосовых каналов Discord. Бонусом добавлен список всех основных доменов Discord.",
+  "description": "Cписок IP-адресов Discord",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
