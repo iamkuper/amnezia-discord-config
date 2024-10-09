@@ -108,7 +108,7 @@ async function processRegionFile(filePath) {
     try {
         // Чтение файла
         const data = await fs.readFile(filePath, 'utf-8');
-        allDomains = [ ...allDomains, ...data ];
+
 
         // Получаем название файла без расширения (регион)
         const region = path.basename(filePath, path.extname(filePath));
@@ -119,7 +119,7 @@ async function processRegionFile(filePath) {
 
         // Разделение содержимого файла по разделителю
         const domains = data.split(DELIMITER);
-
+        allDomains = [ ...allDomains, ...domains ];
 
         let ips = [];
         // Перебираем домены
