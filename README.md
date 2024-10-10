@@ -112,3 +112,7 @@
 - **USDT (TRC20):** TQANwUtCf9UmLZyM3Ty18hDsYpPAVmrpbH
 - **BTC:** bc1quvv5knvrvya5hn4xzpsfp5tpm5n9yuvmscmg6t
 - **ETH:** 0xF6a93e81A7cf88b22F5Cec3ABfC0A2295A5Aa7A3
+
+### About in English
+
+Generator of IP used by the Discord messenger, as well as read-made configs for VPN and DPI systems.
