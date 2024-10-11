@@ -126,7 +126,7 @@ const log = console.log.bind(console);
     let result = [];
 
     // Чтение основных данных
-    const main = await fs.readFile(`./configs/all.${regions.resultType}.txt`, 'utf-8');
+    const main = await fs.readFile(`./configs/main.${regions.resultType}.txt`, 'utf-8');
     result = [...result, ...main.split("\r\n")];
 
     for (const region of regions.regions) {
