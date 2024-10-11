@@ -21,7 +21,6 @@ const regionTypes = {
     ],
     Europe: [
         'bucharest',
-        'dubai',
         'finland',
         'frankfurt',
         'madrid',
@@ -32,11 +31,13 @@ const regionTypes = {
         'warsaw',
     ],
     Asia: [
+        'dubai',
         'hongkong',
         'india',
         'japan',
         'singapore',
         'south-korea',
+        'tel-aviv',
     ],
     Africa: [
         'southafrica',
